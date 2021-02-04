@@ -28,7 +28,7 @@ module.exports = {
         node: true, // Node.js 全局变量和 Node.js 作用域
         browser: true // 浏览器环境中的全局变量
     },
-	parser: "babel-eslint",
+	// parser: "babel-eslint",
     parserOptions: { // 解析器选项
         /**
          * 指定你想要支持的 JavaScript 语言选项、可以使用 6、7、8、9 或 10 来指定你想要使用的 ECMAScript 版本
@@ -346,30 +346,5 @@ module.exports = {
         "symbol-description": 2, // 要求 symbol 描述
         "template-curly-spacing": 2, // 要求或禁止模板字符串中的嵌入表达式周围空格的使用
         "yield-star-spacing": 2 // 强制在 yield* 表达式中 * 周围使用空格
-    },
-    overrides: [ // 为特定类型的文件指定环境
-        {
-            files: [
-                "**/__tests__/*.{j,t}s?(x)",
-                "**/tests/unit/**/*.spec.{j,t}s?(x)"
-            ],
-            env: {
-                jest: true // Jest 全局变量。
-            }
-        },
-        { // 若要禁用一组文件的配置文件中的规则，请使用 overrides 和 files。例如:
-            files: [
-                "*-test.js",
-                "*.spec.js"
-            ],
-            rules: {
-                "no-unused-expressions": 0
-            }
-        }
-    ],
-    globals: { // 当访问当前源文件内未定义的变量时，no-undef 规则将发出警告。如果你想在一个源文件里使用全局变量
-        uni: true,
-        wx: true,
-        require: true
     }
 };

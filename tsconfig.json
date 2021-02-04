@@ -7,7 +7,7 @@
         "outDir": "./lib", // 指定输出目录。编译后的 JavaScript 代码会在与 tsconfig.json 同级的 lib 文件夹中。
         "strict": true, // 启用所有严格类型检查选项。 启用 "strict相当于启用 "noImplicitAny, "noImplicitThis, "alwaysStrict， "strictNullChecks和 "strictFunctionTypes和"strictPropertyInitialization。
 
-//        "baseUrl": ".", // 解析非相对模块名的基准目录。
+        "baseUrl": ".", // 解析非相对模块名的基准目录。
         "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查。 可以忽略 types 配置的文件
         "experimentalDecorators": true, // 启用实验性的ES装饰器。
         "downlevelIteration": true, // TypeScript 2.3 在 ES3 和 ES5 为编译目标时由--downlevelIteration编译选项增加了完整的对生成器和迭代器协议的支持。
