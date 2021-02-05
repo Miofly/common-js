@@ -5,9 +5,7 @@
     "main": "src/index.ts",
     "scripts": {
         "build": "tsc",
-        "test": "jest --config jestconfig.json",
-        "prepare": "npm run build",
-
+        "prepublish": "yarn build && npm version patch",
         "git": "git add . && git commit -m '更新' && git push"
     },
     "devDependencies": {
