@@ -14,7 +14,7 @@
         "typescript": "~3.9.3",
         "@dcloudio/types": "*"
     },
-    "author": "",
+    "author": "1",
     "license": "ISC",
     "files": [
         "lib/**/*"
