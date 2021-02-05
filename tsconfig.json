@@ -89,7 +89,8 @@
     },
     // ts 管理的文件
     "include": [
-        "./src"
+        "./src",
+        "./src/module/root.ts"
     ],
     // ts 排除的文件
     "exclude": [
