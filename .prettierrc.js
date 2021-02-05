@@ -1,5 +1,5 @@
 module.exports =  {
-	printWidth: 80, // 设置prettier单行输出（不折行）的（最大）长度。
+	printWidth: 100, // 设置prettier单行输出（不折行）的（最大）长度。
 	semi: false, // 行末分号
 	singleQuote: true, //单引号
 	trailingComma: "all", // 尽可能使用尾随逗号（包括函数参数）
