@@ -1,6 +1,6 @@
 const roots = {
 	// 信息提示
-	showToast (title = '操作成功', icon: string | boolean = 'none', duration = 1300, mask = false): void {
+	showToast (title = '操作成功', icon: any = 'none', duration = 1300, mask = false): void {
 		uni.showToast({ title, icon, duration, mask })
 	},
 	// loading设置
