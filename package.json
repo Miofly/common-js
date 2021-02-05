@@ -7,6 +7,8 @@
         "build": "tsc",
         "test": "jest --config jestconfig.json",
         "prepare": "npm run build",
+
+        "preversion": "git add . && git commit -m '111'",
         "postversion": "git push && git push --tags"
     },
     "devDependencies": {
