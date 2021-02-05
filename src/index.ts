@@ -235,7 +235,7 @@ const timeRandomNumber = () => {
 }
 
 export {
-	// getAstro,
+	getAstro,
 	getAge,
 	strEllipsis,
 	sortBy,
