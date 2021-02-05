@@ -85,6 +85,9 @@
             "scripthost",
             "es2015",
             "es5"
+        ],
+        "types": [ // 设置引入的定义文件 来禁用自动引入@types包。
+            "@dcloudio/types"
         ]
     },
     // ts 管理的文件
