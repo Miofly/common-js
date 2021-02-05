@@ -37,12 +37,12 @@ const getAge = (strBirthday: string) => {
 	const birthYear = strBirthdayArr[0]
 	const birthMonth = strBirthdayArr[1]
 	const birthDay = strBirthdayArr[2]
-	
+
 	const d = new Date()
 	const nowYear = d.getFullYear()
 	const nowMonth = d.getMonth() + 1
 	const nowDay = d.getDate()
-	
+
 	// @ts-ignore
 	if (nowYear == birthYear) {
 		returnAge = 0 // 同年 则为0岁
@@ -86,7 +86,7 @@ const sortBy = (attr: string | number, rev: number | undefined) => {
 	} else {
 		rev = rev ? 1 : -1
 	}
-	
+
 	return function (a: number, b: number) {
 		// @ts-ignore
 		a = a[attr]
@@ -172,7 +172,7 @@ const conver = (limit: number) => {
 		// 其他转化成GB
 		size = `${(limit / (1024 * 1024 * 1024)).toFixed(2)}GB`
 	}
-	
+
 	const sizestr = `${size}`
 	const len = sizestr.indexOf('.')
 	const dec = sizestr.substr(len + 1, 2)
@@ -235,8 +235,6 @@ const timeRandomNumber = () => {
 }
 
 export {
-	getSpecialDays,
-	getShengXiao,
 	getAstro,
 	getAge,
 	strEllipsis,

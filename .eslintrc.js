@@ -25,10 +25,10 @@ module.exports = {
 	env: {
 		// 指定环境
 		node: true, // Node.js 全局变量和 Node.js 作用域
-		browser: true, // 浏览器环境中的全局变量 env环境变量配置，形如console属性只有在browser环境下才会存在，如果没有设置支持browser,那么可能报console is undefined的错误。
+		browser: true // 浏览器环境中的全局变量 env环境变量配置，形如console属性只有在browser环境下才会存在，如果没有设置支持browser,那么可能报console is undefined的错误。
 	},
 	parser: '@typescript-eslint/parser', // 定义ESLint的解析器 在ts项目中必须执行解析器为@typescript-eslint/parser，才能正确的检测和规范TS代码
-	extends: ['prettier/@typescript-eslint', 'plugin:prettier/recommended'], // 定义文件继承的子规范
+	extends: ['plugin:@typescript-eslint/recommended'], // 定义文件继承的子规范
 	parserOptions: {
 		// 解析器选项
 		/**
@@ -45,15 +45,24 @@ module.exports = {
 		 */
 		ecmaFeatures: {
 			jsx: true,
-			experimentalObjectRestSpread: true,
-		},
+			experimentalObjectRestSpread: true
+		}
 	},
 	plugins: [
 		// 第三方插件 plugins 属性值 可以省略包名的前缀 eslint-plugin-。
-		'prettier',
-		'@typescript-eslint',
+		'@typescript-eslint'
 	],
 	rules: {
 		// 配置定义在插件中的一个规则的时候，你必须使用 插件名/规则ID 的形式 vue/attribute-hyphenation
-	},
+		'space-before-function-paren': 2, // 强制在 function 的左括号之前使用一致的空格
+
+
+
+		// typeScript 不需要的规则
+		'@typescript-eslint/explicit-module-boundary-types': 0, // 允许any类型
+		'@typescript-eslint/no-explicit-any': 0, // 允许any类型
+		'@typescript-eslint/ban-ts-comment': 0, // 允许加 @ts-ignore
+
+		'@typescript-eslint/no-unused-vars': 1 // 未使用的变量仅做提醒
+	}
 }
