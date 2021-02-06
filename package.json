@@ -4,7 +4,7 @@
     "description": "1",
     "main": "src/index.ts",
     "scripts": {
-        "build": "tsc && npm version patch",
+        "build": "rm -rf lib && tsc && npm version patch",
         "git": "git add . && git commit -m wfd_update && git push"
     },
     "devDependencies": {
