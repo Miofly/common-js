@@ -79,7 +79,8 @@
         //target ES5：DOM，ES5，ScriptHost。
         //target ES6：DOM，ES6(ES2015)，DOM.Iterable，ScriptHost。
         "lib": [
-           "ES6"
+            "ES6",
+            "dom"
         ],
         "types": [ // 设置引入的定义文件 来禁用自动引入@types包。
             "@dcloudio/types"
