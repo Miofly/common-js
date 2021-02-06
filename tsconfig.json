@@ -8,7 +8,9 @@
         "lib": [
             "es6"
         ],
-        "types": ["@dcloudio/types"]
+        "types": [ // 设置引入的定义文件 来禁用自动引入@types包。
+            "@dcloudio/types"
+        ]
     },
     "include": [
         "src"
