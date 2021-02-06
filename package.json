@@ -2,7 +2,7 @@
     "name": "mio-common-js",
     "version": "1.0.22",
     "description": "1",
-    "main": "src/index.ts",
+    "main": "lib/index.js",
     "scripts": {
         "build": "rm -rf lib && tsc && npm version patch",
         "git": "git add . && git commit -m wfd_update && git push"
