@@ -11,3 +11,5 @@ const roots = {
 		})
 	},
 }
+
+export default roots
