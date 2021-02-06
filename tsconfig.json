@@ -3,7 +3,7 @@
     "compilerOptions": {
         "target": "ES5", // 编译输出目标 ES 版本
         "module": "CommonJS", // 指定生成哪个模块系统代码，默认值：target === "ES3" or "ES5" ? "CommonJS" : "ES6"。
-        "declaration": false, // 是否生成对应的声明文件，默认值：false。在构建包时，应该设置为 true，这样 TypeScript 会将生成的声明文件和对应编译后的 JavaScript 代码一起导出，以便包可以在 TypeScript 和 JavaScript 项目中同时使用。本项目中生成的声明文件是 /lib/index.d.ts。
+        "declaration": true, // 是否生成对应的声明文件，默认值：false。在构建包时，应该设置为 true，这样 TypeScript 会将生成的声明文件和对应编译后的 JavaScript 代码一起导出，以便包可以在 TypeScript 和 JavaScript 项目中同时使用。本项目中生成的声明文件是 /lib/index.d.ts。
         "outDir": "./lib", // 指定输出目录。编译后的 JavaScript 代码会在与 tsconfig.json 同级的 lib 文件夹中。
         "strict": true, // 启用所有严格类型检查选项。 启用 "strict相当于启用 "noImplicitAny, "noImplicitThis, "alwaysStrict， "strictNullChecks和 "strictFunctionTypes和"strictPropertyInitialization。
 
