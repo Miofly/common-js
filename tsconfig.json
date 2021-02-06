@@ -7,7 +7,7 @@
         "outDir": "./lib",
         "strict": true,
         "lib": ["es6"],
-
+        "skipDefaultLibCheck": true, // 忽略 库的默认声明文件的类型检查。
         //        "charset": "", // "utf8", // 输入文件的字符集。
         //        "checkJs": false, // 在 .js文件中报告错误。与 "allowJs配合使用。
 
@@ -66,14 +66,6 @@
         // 编译需要的库文件，例如你指定的 target 是 ES5，但是在代码中使用了 ES6 特性，就需要在 lib 中加上 ES6。默认值：如果 lib 没有指定默认注入的库的列表，默认注入的库为：
         //target ES5：DOM，ES5，ScriptHost。
         //target ES6：DOM，ES6(ES2015)，DOM.Iterable，ScriptHost。
-        "lib": [
-            "esnext",
-            "dom",
-            "dom.iterable",
-            "scripthost",
-            "es2015",
-            "es5"
-        ],
         "types": [ // 设置引入的定义文件 来禁用自动引入@types包。
             "@dcloudio/types"
         ]
