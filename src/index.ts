@@ -6,7 +6,10 @@ const getSpecialDays = (y: number): number => {// 123
 	return 28
 }
 
-const getNum = (num: any) => num
+const getNum = (num: any) => {
+	
+	return num
+}
 
 export {
 	getNum,
