@@ -54,15 +54,25 @@ module.exports = {
 	],
 	rules: {
 		// 配置定义在插件中的一个规则的时候，你必须使用 插件名/规则ID 的形式 vue/attribute-hyphenation
+
+		// 普通规则
 		'space-before-function-paren': 2, // 强制在 function 的左括号之前使用一致的空格
-
-
+		'one-var': 0, // 不使用一个变量合并
+		semi: 0, // 不需要分号
+		quotes: 0, // 不使用双引号
+		'quote-props': 0, // 不要求对象字面量属性名称用引号括起来
+		'func-names': 0, // 允许没有名字的函数，方便闭包的使用
+		'no-extra-parens': 2, // 禁止不必要的括号
+		'wrap-regex': 2, // 要求正则表达式被括号括起来
+		'spaced-comment': 2, // 双斜杠注释后要空格
 
 		// typeScript 不需要的规则
 		'@typescript-eslint/explicit-module-boundary-types': 0, // 允许any类型
 		'@typescript-eslint/no-explicit-any': 0, // 允许any类型
 		'@typescript-eslint/ban-ts-comment': 0, // 允许加 @ts-ignore
+		'@typescript-eslint/no-unused-vars': 1, // 未使用的变量仅做提醒
 
-		'@typescript-eslint/no-unused-vars': 1 // 未使用的变量仅做提醒
+		// ES6
+		'arrow-body-style': 2, // 要求箭头函数体使用大括号
 	}
 }

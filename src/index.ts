@@ -1,6 +1,7 @@
+export const Greeter = (name: string) => `Hello ${name}`;
 // 判断是否是余年
-const getSpecialDays = (y: number): number => {
-	if (y % 400 == 0 || (y % 4 == 0 && y % 100 != 0)) {
+const getSpecialDays = (y: number): number => {// 123
+	if (y % 400 == 0 || y % 4 == 0 && y % 100 != 0) {
 		return 29
 	}
 	return 28
@@ -14,21 +15,19 @@ const getShengXiao = (birth: any) => {
 		return ''
 	}
 	if (len == 2) {
-		birth - 0 > 30 ? (birth = `19${birth}`) : (birth = `20${birth}`)
+		birth - 0 > 30 ? birth = `19${birth}` : birth = `20${birth}`
 	}
 	const year = new Date(birth).getFullYear()
 	const arr = ['猴', '鸡', '狗', '猪', '鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊']
-	return /^\d{4}$/.test(String(year)) ? arr[year % 12] : ''
+	return (/^\d{4}$/).test(String(year)) ? arr[year % 12] : ''
 }
 
 // 星座计算 getAstro(parseInt('09'), 26)
-const getAstro = (m: number, d: any) => {
-	return '魔羯水瓶双鱼白羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯'.substr(
+const getAstro = (m: number, d: any) => '魔羯水瓶双鱼白羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯'.substr(
 		// @ts-ignore
 		m * 2 - (d < '102223444433'.charAt(m - 1) - -19) * 2,
 		2
 	)
-}
 
 // 根据出生日期算出年龄 getAge('1995-09-26')
 const getAge = (strBirthday: string) => {
@@ -75,9 +74,7 @@ const getAge = (strBirthday: string) => {
 	return returnAge // 返回周岁年龄
 }
 // 字符串过长截取+省略号
-const strEllipsis = (str: any, length: number): string => {
-	return String(str).length > length ? `${str.slice(0, length)}...` : str
-}
+const strEllipsis = (str: any, length: number): string => String(str).length > length ? `${str.slice(0, length)}...` : str
 
 const sortBy = (attr: string | number, rev: number | undefined) => {
 	// 第二个参数没有传递 默认升序排列 true表示升序排列，false降序排序
@@ -123,26 +120,17 @@ const trim = (str: string, pos = 'both') => {
 }
 
 // 格式化对象
-const gsh = (str: any): void => {
-	return JSON.parse(JSON.stringify(str))
-}
+const gsh = (str: any): void => JSON.parse(JSON.stringify(str))
 
 // 得到 localStorage 数据
-const getLocalData = (str: string): any => {
-	return localStorage.getItem(str)
-}
+const getLocalData = (str: string): any => localStorage.getItem(str)
 
-const emptyPaading = (str: any, sign: any): any => {
-	return str || sign
-}
+const emptyPaading = (str: any, sign: any): any => str || sign
 
 const jumpWX = () => {
 	window.location.replace('weixin://')
 }
-
-const randomNum = (min: number, max: number) => {
-	return Math.floor(Math.random() * (max - min + 1)) + min
-}
+const randomNum = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min
 const makeRandomArr = (arrList: string | any[], num: number) => {
 	if (num > arrList.length) {
 		num = arrList.length // eslint-disable-line
@@ -163,6 +151,8 @@ const timeRandomNumber = () => {
 }
 
 export {
+	getShengXiao,
+	getSpecialDays,
 	getAstro,
 	getAge,
 	strEllipsis,
@@ -177,3 +167,4 @@ export {
 	makeRandomArr,
 	timeRandomNumber
 }
+
